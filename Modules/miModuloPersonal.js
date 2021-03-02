@@ -1,5 +1,2 @@
-const mensaje = (msg) => console.log(msg);
-
-const colores = ["rojo", "verde","azul"];
-
-module.exports = {mensaje, colores};
+const esIgual = (1==2);
+console.log(`${esIgual ? 'si': 'no'} es verdad`);
