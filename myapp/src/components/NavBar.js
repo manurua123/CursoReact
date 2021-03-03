@@ -2,8 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 function NavBar() {
     return (
-
-        
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
         <a class="navbar-brand" href="#">TITULO</a>
@@ -25,10 +23,6 @@ function NavBar() {
         </div>
         </div>
     </nav>
-    
-    
-    
-    
     )
 }
 
