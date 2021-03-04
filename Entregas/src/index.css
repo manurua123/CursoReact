@@ -11,3 +11,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*  agrego un margen para que el menu flotante no tape el contenido*/
+body { padding-top: 70px; } 
