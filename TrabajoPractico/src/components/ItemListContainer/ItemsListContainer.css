@@ -1,0 +1,16 @@
+.ItemsList{
+   background-color: none; 
+   
+   
+}
+.itemBox{
+    display:inline;
+    padding: 30px;
+    width: 33%;
+    
+}
+.item-links{
+    color: azure;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
