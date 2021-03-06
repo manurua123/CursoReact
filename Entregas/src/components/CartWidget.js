@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
-import logo from '../assets/img/shopping-cart-solid.svg';
+
+// get our fontawesome imports
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+
 
 class CartWidget extends Component {
   render() {
     return (
       <>
-        <img src={logo} width="30" height="30" />
+       <FontAwesomeIcon icon={faShoppingCart} />
       </>
     );
   }
