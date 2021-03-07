@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { MenuItems } from "./MenuItems"
-import { Button } from "../Button"
+import { MenuItems } from "./MenuItems";
+import CartWidget from "./CartWidget";
+
 import './Navbar.css'
 
 class Navbar extends Component {
@@ -13,7 +14,7 @@ class Navbar extends Component {
     render() {
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">React<i className="fab fa-react"></i></h1>
+                <h1 className="navbar-logo">Curso React<i className="fab fa-react"></i></h1>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
@@ -27,8 +28,10 @@ class Navbar extends Component {
                             </li>
                         )
                     })}
+                    <li>
+                     <CartWidget/>
+                    </li>
                 </ul>
-                <Button>Sign Up</Button>
             </nav>
         )
     }

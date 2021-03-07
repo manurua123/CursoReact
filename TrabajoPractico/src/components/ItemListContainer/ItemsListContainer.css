@@ -1,16 +1,38 @@
 .ItemsList{
-   background-color: none; 
-   
-   
+    margin: 30px 10% 30px 10%;
+
+   display: grid;
+   grid-template-columns: repeat(3, auto); 
 }
 .itemBox{
-    display:inline;
-    padding: 30px;
-    width: 33%;
-    
+   height: 20vw;
+   margin: 10px;
+   background-color: #693c72;
+}
+.itemBox:hover{
+
+   background-color: #440a67;
+   transition: all 0.2s ease-out;
 }
 .item-links{
     color: azure;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 960px) {
+
+    .ItemsList{
+       
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+      
+     }
+     .itemBox{
+        height: 20vw;
+        margin: 2px;
+        
+     }
+
 }
