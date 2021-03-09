@@ -1,6 +1,5 @@
 .ItemsList{
     margin: 30px 10% 30px 10%;
-
    display: grid;
    grid-template-columns: repeat(3, auto); 
 }
@@ -8,14 +7,15 @@
    height: 20vw;
    margin: 10px;
    background-color: #693c72;
+   text-align: center;
+   align-items: center;
+   display: grid;
+   color: azure;
+   
 }
-.itemBox:hover{
 
-   background-color: #440a67;
-   transition: all 0.2s ease-out;
-}
 .item-links{
-    color: azure;
+   color: azure;
     text-decoration: none;
     padding: 0.5rem 1rem;
     font-size: 2rem;
