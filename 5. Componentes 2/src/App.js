@@ -1,16 +1,14 @@
-import React from 'react';
-import ClaseEjemplo from "./components/ClaseEjemplo"
-import FuncionEjemplo from "./components/FuncionEjemplo"
+import React, { useEffect } from 'react';
+
+import FuncionEjemplo from "./components/ItemsListContainer"
 import './App.css';
+import ItemsListContainer from '../../TrabajoPractico/src/components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
-    <div className="App">
-   <h2>CLASE</h2>
-    <ClaseEjemplo />
-<p>-------------------------------</p>
-<h2>FUNCION</h2>
-    <FuncionEjemplo />
+   <div>
+    <h2>ITEM LIST</h2>
+    
     </div>
   );
 }
