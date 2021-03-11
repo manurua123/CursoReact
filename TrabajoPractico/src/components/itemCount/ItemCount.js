@@ -6,9 +6,7 @@ const ItemCount =()=>{
 
     const restarStock =  (e,nuevoStock) => {
         e.preventDefault();
-        if(stockActual >= 0  & nuevoStock<=stockActual){
-            setStockActual((stockActual)=> stockActual - nuevoStock);
-        }
+        setStockActual((stockActual)=> stockActual - nuevoStock);
     };
     return (
         <div className = 'ItemCount'>

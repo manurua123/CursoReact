@@ -2,31 +2,23 @@ import {useState} from 'react';
 import './ItemsButtons.css'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-  const [datos, setDatos] = useState({
-    cantidad: initial,
-})
-
-
+  const [valor, setDatos] = useState(initial)
 
     return (
-      <form className='formulario'>
+
         <div className='contenido'>
-          Unidades Disponibles: {stock}
-          <br />
+           Unidades Disponibles: {stock} <br/>
+          <div className='box1'>
+            <button  className="changeButton sub"  disabled={(valor < 2) ? true:false} onClick={() => {setDatos((valor) => valor -1)}}><i class="fas fa-minus"></i></button>
 
-           <button onClick={() => setDatos((cantidad) => cantidad +1)}><i class="fas fa-minus"></i></button> 
+            {valor}
 
-          <input type="number" min="1" max={stock} value={datos.cantidad} onChange={(e) => {
-            const { value } = e.target
-            setDatos({ cantidad: value })
-          }} />
-
-         <button onClick={() => setDatos((cantidad) => cantidad +1)}> <i class="fas fa-plus"></i> </button>
-
-          <br />
-          <button className="myButton" onClick={(e) => onAdd(e, datos.cantidad)}>Agregar al carrito</button>
+           <button className="changeButton add" disabled={(valor >= stock) ? true:false} onClick={() => setDatos((valor) => valor +1)}> <i class="fas fa-plus"></i> </button>
         </div>
-      </form>
+
+        <button className={(valor > stock | valor < 1) ? 'noSendButton':'sendButton'}  disabled={(valor > stock | valor < 1) ? true:false} onClick={(e) => onAdd(e, valor)}>Agregar al carrito</button>
+        </div>
+
     );
   };
   export default ItemCount;
