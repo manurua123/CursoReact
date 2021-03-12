@@ -1,17 +1,12 @@
 import React from 'react';
 
 import './ItemsListContainer.css';
-import ItemCount from "../itemCount/ItemCount"
+import ItemList from "../ItemsList/ItemList"
 
-const ItemsListContainer =() =>  {
+const ItemsListContainer =(props) =>  {
         return(
             <div >
-                <ItemCount/>
-                <ItemCount/>
-                <ItemCount/>
-                <ItemCount/>
-
-                <ItemCount/>
+                <ItemList items={props.items}/>
             </div>
         )
     }

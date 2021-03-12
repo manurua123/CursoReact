@@ -1,9 +1,10 @@
+import React from 'react';
 import { useState } from 'react';
 import ItemButtons from './ItemButtons';
-import React from 'react';
 
-const ItemCount =()=>{
-    const [stockActual,setStockActual] = useState(10);
+
+const ItemCount =(props)=>{
+    const [stockActual,setStockActual] = useState(props.stock);
 
     const restarStock =  (e,nuevoStock) => {
         e.preventDefault();
