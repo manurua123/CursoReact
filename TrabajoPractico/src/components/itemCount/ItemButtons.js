@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './ItemsButtons.css'
+import React from 'react';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [valor, setDatos] = useState(initial)

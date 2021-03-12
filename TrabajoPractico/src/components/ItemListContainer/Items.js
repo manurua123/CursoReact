@@ -1,3 +1,4 @@
+import React from 'react';
 export const Items = [
     {title: 'chess', url: '#', img: <i class="fas fa-chess"></i>, stock: 5,  cName: 'item-links'},
     {title: 'anchor', url: '#', img: <i class="fas fa-anchor"></i>, stock: 3,cName: 'item-links'},
