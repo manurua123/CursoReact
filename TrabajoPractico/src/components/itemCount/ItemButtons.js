@@ -17,7 +17,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
            <button className="changeButton add" disabled={(valor >= stock) ? true:false} onClick={() => setDatos((valor) => valor +1)}> <i class="fas fa-plus"></i> </button>
         </div>
 
-        <button className={(valor > stock | valor < 1) ? 'noSendButton':'sendButton'}  disabled={(valor > stock | valor < 1) ? true:false} onClick={(e) => onAdd(e, valor)}>Agregar al carrito</button>
+        <button className={(valor > stock | valor < 1) ? 'noSendButton':'sendButton'}  disabled={(valor > stock | valor < 1) ? true:false} onClick={(e) => onAdd(e, valor)}>Agregar</button>
         </div>
 
     );
