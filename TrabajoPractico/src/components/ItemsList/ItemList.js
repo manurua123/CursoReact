@@ -5,8 +5,8 @@ import './ItemList.css'
 const ItemList = (props) => (
   <>
     <ul className='listaProductos'>
-      {props.items.map((x, index) => (
-        <Item key={index} item={x} />
+      {props.items.map((item, index) => (
+        <Item key={index} item={item} />
       ))}
     </ul>
   </>
