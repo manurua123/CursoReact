@@ -1,2 +1,33 @@
 
+.LinkProducto{
+    color:#f9f3f3 ;
+    text-decoration: none;
+}
+.LinkProducto:hover{
+    color:#f73859 ;
+}
+.ContenedoLink{
+        display: inline-block;
+        background:linear-gradient(180deg, #283149 20%,#404b69 100%);
+        text-align: center;
+        margin: 2.5%;
+        width: 20%;
+        height: 18em;
+        padding: 2em;
+        padding-bottom: 0em;
+        list-style: none;
+        color:#f9f3f3 ;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
 
+@media screen and (max-width: 960px) {
+    .ContenedoLink{
+        display: inline-block;
+        background-color:#283149;
+        text-align: center;
+        margin: 2.5%;
+        width: 45%;
+        padding: 2em;
+    }
+}

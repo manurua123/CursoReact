@@ -4,7 +4,7 @@
     background:linear-gradient(180deg, #283149 20%,#404b69 100%);
     text-align: center;
     margin: 2.5%;
-    width: 20%;
+    width: 50%;
     height: 34em;
     padding: 2em;
     padding-bottom: 0em;
@@ -16,8 +16,6 @@
 .titulo{
     font-size: xx-large;
     color: #f73859;
-    
-
 }
 .descripcion{
     font-size: larger;
@@ -30,10 +28,6 @@
     font-weight: bold;
 
 }
-
-.imagen{
-}
-
 
 @media screen and (max-width: 960px) {
     .producto{
