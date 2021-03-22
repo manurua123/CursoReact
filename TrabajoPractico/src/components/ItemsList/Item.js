@@ -16,16 +16,15 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 function Item (props){
     let match = useRouteMatch();
     return(
-    <Router>
+
         <div className="ContenedoLink">
-        <Link className="LinkProducto" to={`/item/${props.item.title}`} >
-            <li className="titulo">{props.item.title}</li>
-            <li className="imagen">{props.item.img}</li>
+            <Link className="LinkProducto" to={`/item/${props.item.title}`} >
+                <li className="titulo">{props.item.title}</li>
+                <li className="imagen">{props.item.img}</li>
             </Link>
         </div>
-    </Router>
+
     )
 }
-
 
 export default Item;

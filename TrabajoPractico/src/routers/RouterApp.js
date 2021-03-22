@@ -27,18 +27,17 @@ const RouterApp = () => {
         </nav>
       </div>
       <Switch>
-        <Route path='/item/:title' >
-          <Item />
+        <Route path='/item:title' >
+          <MostrarmeAlgoPorFavor />
         </Route>
         <Route path="/categoria/:id?" children={<ItemsListContainer />} />
         <Route path='/' exact children={<ItemsListContainer />} />
       </Switch>
-
     </Router>
   );
 }
 
-function Item() {
+function MostrarmeAlgoPorFavor() {
   let { tittle } = useParams();
   return (
     <div>

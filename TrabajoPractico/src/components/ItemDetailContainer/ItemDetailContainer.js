@@ -12,7 +12,6 @@ const ItemDetailContainer =() =>  {
     <div >
          {title}
         <ItemDetail items={ListaItems.filter(items=> items.title == title)}/> 
-        
     </div>
     )
 
