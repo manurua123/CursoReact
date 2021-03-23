@@ -1,24 +1,16 @@
 import React from 'react';
 
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    NavLink,
-    Redirect,useRouteMatch,
-   } from "react-router-dom";
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
+import { Link } from "react-router-dom";
+// import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 import './ItemList.css' 
-import ItemDetail from '../ItemDetail/ItemDetail';
+// import ItemDetail from '../ItemDetail/ItemDetail';
 
 function Item (props){
-    let match = useRouteMatch();
-    return(
+        return(
 
         <div className="ContenedoLink">
-            <Link className="LinkProducto" to={`/item/${props.item.title}`} >
+            <Link className="LinkProducto" to={`item/${props.item.title}`} >
                 <li className="titulo">{props.item.title}</li>
                 <li className="imagen">{props.item.img}</li>
             </Link>

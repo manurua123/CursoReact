@@ -4,6 +4,7 @@ import ItemsListContainer from '../components/ItemListContainer/ItemListContaine
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import CartWidget from "../components/CartWidget/CartWidget";
 import './RouterApp.css'
+import ItemDetail from "../components/ItemDetail/ItemDetail";
 
 const RouterApp = () => {
   const [clicked, setClicked] = useState(false);
@@ -27,8 +28,9 @@ const RouterApp = () => {
         </nav>
       </div>
       <Switch>
-        <Route path='/item:title' >
+        <Route path='/item:title'>
           <MostrarmeAlgoPorFavor />
+          {/* <ItemDetailContainer/> */}
         </Route>
         <Route path="/categoria/:id?" children={<ItemsListContainer />} />
         <Route path='/' exact children={<ItemsListContainer />} />
@@ -41,7 +43,12 @@ function MostrarmeAlgoPorFavor() {
   let { tittle } = useParams();
   return (
     <div>
+      <h1>articulo: {tittle}</h1>
+      <h2>articulo: {tittle}</h2>
       <h3>articulo: {tittle}</h3>
+      <h4>articulo: {tittle}</h4>
+      <h5>articulo: {tittle}</h5>
+    
     </div>
   )
 

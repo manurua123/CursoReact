@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 const ListaItems = [
   { title: 'bicycle', category: 'Vehicles', description: 'una breve descripcion del objeto', img: <i class="fas fa-bicycle"></i>, stock: 10, price: '$ 100', link: 'item/iceCream' },
   { title: 'otter', category: 'Animals', description: 'una breve descripcion del objeto', img: <i class="fas fa-otter"></i>, stock: 10, price: '$ 100', link: 'item/iceCream' },
