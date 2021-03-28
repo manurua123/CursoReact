@@ -1,0 +1,11 @@
+.ItemsListContainer{
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 960px) {
+
+    .ItemsListContainer{
+        padding-top: 100px;
+    }
+
+}

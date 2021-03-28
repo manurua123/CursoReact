@@ -2,7 +2,7 @@ import React from 'react';
 
 import ItemDetail from '../ItemDetail/ItemDetail'
 // import ItemCount from "../itemCount/ItemCount"
-import { useParams } from 'react-router';
+import { BrowserRouter as Router, Switch, Route, NavLink, useParams, } from "react-router-dom";
 import ListaItems from "../../ListaItems"
 
 

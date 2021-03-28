@@ -1,0 +1,62 @@
+
+.contenido{
+  background-color: #f9f3f3;
+  align-items: center;
+  text-align: center;
+  margin:2em 0px;  
+  width: 100%;
+  padding: 1em;
+  color: black;
+  border: 2px solid #283149;
+  border-radius: 5px;
+}
+.box1{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    align-items: center;
+    border: 2px solid #283149;
+    background-color: #f9f3f3;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    width: 100%;
+    margin-top: 0.5em;
+}
+.sub{
+  align-items: initial;
+}
+.changeButton{
+    padding: 0.5em;
+    background-color:transparent;
+    color: #283149;
+    transition-duration: 0.2s;
+    border:0px;
+    font-size: large;
+}
+
+.changeButton:hover {
+    color: #f73859;
+  }
+
+.sendButton{
+  border: 2px solid #283149;
+  background-color: #f73859;
+  padding: 0.5em 1em ;
+
+  font-size: large;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.sendButton:hover{
+  color: #283149;
+  background-color:#f9f3f3;
+}
+
+.noSendButton{
+  border: 2px solid #283149;
+  background-color: #f9f3f3;
+  padding: 0.5em 1em ;
+  color: #283149;
+  font-size: large;
+  border-radius: 5px;
+  cursor: not-allowed
+}
