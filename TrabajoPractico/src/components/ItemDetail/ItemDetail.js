@@ -6,11 +6,11 @@ const ItemDetail = (props)=> {
 
   return(
   <ul  className="producto">
-         <li className="titulo">{props.title}</li>
-        <li className="imagen">{props.img}</li>
-        <li className='descripcion'>{props.description}</li>
-        <li className="precio"> <p>precio:</p> {props.price}</li>
-        <ItemCount stock= {props.stock}/>
+        <li className="titulo">{props.item.title}</li>
+        <li className="imagen">{props.item.img}</li>
+        <li className='descripcion'>{props.item.description}</li>
+        <li className="precio"> <p>precio:</p> {props.item.price}</li>
+        <ItemCount stock= {props.item.stock}/>
   </ul>
   )
 }

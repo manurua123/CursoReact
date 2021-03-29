@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
 import CartWidget from "../CartWidget/CartWidget";
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
+   
+    NavLink
    } from "react-router-dom";
 
 import './Navbar.css'
@@ -19,20 +17,18 @@ class Navbar extends Component {
 
     render() {
         return(
-         
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">Curso React<i className="fab fa-react"></i></h1>
+               <NavLink to='/'> <h1 className="navbar-logo">Curso React<i className="fab fa-react"></i></h1></NavLink>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    <li ><a className='nav-links'>Categoria</a></li>
-                    <li ><a className='nav-links'>Nostros</a></li>
-                    <li ><a className='nav-links'>Contacto</a></li>
+                    <li ><NavLink  to="/category/Foods"><p className='nav-links'>Comida</p></NavLink></li>
+                    <li ><NavLink to="/category/Vehicles"><p className='nav-links'>Vehiculos</p></NavLink></li>
+                    <li ><NavLink to="/category/Animals"><p className='nav-links'>Animales</p></NavLink></li>
                     <li><CartWidget/></li>
                 </ul>
-            </nav>
-          
+            </nav> 
         )
     }
 }

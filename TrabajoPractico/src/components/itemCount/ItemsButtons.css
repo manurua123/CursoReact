@@ -40,12 +40,15 @@
 .sendButton{
   border: 2px solid #283149;
   background-color: #f73859;
+  color: #283149;
   padding: 0.5em 1em ;
 
   font-size: large;
   border-radius: 5px;
   font-weight: bold;
+  text-decoration: none;
 }
+
 .sendButton:hover{
   color: #283149;
   background-color:#f9f3f3;
@@ -57,6 +60,29 @@
   padding: 0.5em 1em ;
   color: #283149;
   font-size: large;
+    border-radius: 5px;
+  cursor: not-allowed;
+  font-size: large;
   border-radius: 5px;
-  cursor: not-allowed
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cartButton{
+  border: 2px solid #283149;
+  background-color: #f73859;
+  color: #283149;
+  padding: 0.5em 1em ;
+
+  font-size: large;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.cartButton:hover{
+  color: #283149;
+  background-color:#f9f3f3;
+}
+.noCartButton{
+  display: none;
 }

@@ -12,7 +12,7 @@ const ItemCount =(props)=>{
     };
     return (
         <div className = 'ItemCount'>
-            <ItemButtons stock={stockActual} initial={1} onAdd={restarStock}/>
+            <ItemButtons stock={stockActual} initial={0} onAdd={restarStock}/>
         </div>
     );
 };

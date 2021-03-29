@@ -8,7 +8,7 @@ const ItemsListContainer =(props) =>  {
     let { id } = useParams();
     return(
         <div className='ItemsListContainer'>
-            <ItemList items={(id == null ? ListaItems : ListaItems.filter(item=> item.category === id))}/> 
+            <ItemList items={(id ? (ListaItems.filter(item=> item.category === id)) : ListaItems  )}/> 
         </div>
     )
     }
