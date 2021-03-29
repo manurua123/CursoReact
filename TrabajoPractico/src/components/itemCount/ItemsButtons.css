@@ -37,11 +37,13 @@
     color: #f73859;
   }
 
+
 .sendButton{
   border: 2px solid #283149;
   background-color: #f73859;
   color: #283149;
   padding: 0.5em 1em ;
+  margin-right: 2em;
 
   font-size: large;
   border-radius: 5px;
