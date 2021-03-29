@@ -9,7 +9,7 @@ const ItemDetail = (props)=> {
         <li className="titulo">{props.item.title}</li>
         <li className="imagen">{props.item.img}</li>
         <li className='descripcion'>{props.item.description}</li>
-        <li className="precio"> <p>precio:</p> {props.item.price}</li>
+        <li className="precio">{props.item.price}</li>
         <ItemCount stock= {props.item.stock}/>
   </ul>
   )

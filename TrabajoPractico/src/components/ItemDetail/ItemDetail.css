@@ -4,8 +4,8 @@
     background:linear-gradient(180deg, #283149 20%,#404b69 100%);
     text-align: center;
     width: 50%;
-    margin: 10em 25% 0px 25%;
-    height: 34em;
+    margin: 7em 25% 0px 25%;
+    height: 35em;
     padding: 2em;
     padding-bottom: 0em;
     list-style: none;
@@ -16,9 +16,11 @@
 .titulo{
     font-size: xx-large;
     color: #f73859;
+    font-weight: bold; 
 }
 .descripcion{
     font-size: larger;
+    margin: 0.5em 0em;
 
 }
 .imagen{
@@ -26,7 +28,7 @@
 }
 .precio{
     font-weight: bold;
-
+    font-size: xx-large;
 }
 
 @media screen and (max-width: 960px) {
