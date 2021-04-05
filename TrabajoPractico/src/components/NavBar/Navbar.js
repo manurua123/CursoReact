@@ -26,7 +26,8 @@ class Navbar extends Component {
                     <li ><NavLink  to="/category/Foods"><p className='nav-links'>Comida</p></NavLink></li>
                     <li ><NavLink to="/category/Vehicles"><p className='nav-links'>Vehiculos</p></NavLink></li>
                     <li ><NavLink to="/category/Animals"><p className='nav-links'>Animales</p></NavLink></li>
-                    <li><CartWidget/></li>
+                    <li ><NavLink to="/cart"><CartWidget/></NavLink></li>
+                    <li></li>
                 </ul>
             </nav> 
         )

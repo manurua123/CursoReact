@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, NavLink, useParams, Redirect, } from "react-router-dom";
 import ItemsListContainer from '../components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
+import Cart from '../components/Cart/Cart'
 import './RouterApp.css'
 import Navbar from "../components/NavBar/Navbar";
 
@@ -13,7 +14,7 @@ const RouterApp = () => {
       <Switch>
         <Route path='/item/:id?' children={<ItemDetailContainer/>}/>
         <Route path="/category/:id?" children={<ItemsListContainer/>} />
-        <Route path='/cart' exact children={<estoSeriaUnCarritoDeCompras />} />
+        <Route path='/cart' exact children={<Cart />} />
         <Route path='/' exact children={<ItemsListContainer />} />
         <Redirect to='/' />
       </Switch>  
@@ -21,25 +22,6 @@ const RouterApp = () => {
   );
 }
 
-function estoSeriaUnCarritoDeCompras() {
- 
-  return (
-    <div>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-     <h1>ESTO ES UN CARRITO DE COMPRAS</h1>
-    
-    </div>
-  )
 
-}
 
 export default RouterApp;

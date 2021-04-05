@@ -10,7 +10,7 @@ const ItemDetail = (props)=> {
         <li className="imagen">{props.item.img}</li>
         <li className='descripcion'>{props.item.description}</li>
         <li className="precio">{props.item.price}</li>
-        <ItemCount stock= {props.item.stock}/>
+        <ItemCount item= {props.item}/>
   </ul>
   )
 }
