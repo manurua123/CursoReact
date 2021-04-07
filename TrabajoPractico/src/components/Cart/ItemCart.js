@@ -9,10 +9,14 @@ function Item (props){
         return(
         
         <div className="ItemCart">
-            <li className="titulo">{props.item[0].title}</li>
-            <li className="imagen">{props.item[0].img}</li>
-            <li className='descripcion' >Cantidad: {props.item[1]}</li>
-            <button className='cartButton' onClick={()=>context.removeItem(props.item[0].title)}> Quitar</button>
+            <ul className='ItemCartDetail' >
+                <li className="imagen">{props.item[0].img}</li>
+                <li className="titulo">{props.item[0].title} <br/>
+                   <p>{props.item[0].description}</p> </li>
+                <li className='cantidad' >Cantidad: <br />{props.item[1]}</li>
+                <li className='cantidad' >Precio: <br />${props.item[0].price * props.item[1]}</li>
+                <button className='cartButton' onClick={()=>context.removeItem(props.item[0].title)}> Quitar</button>
+            </ul>
         </div>
 
     )
