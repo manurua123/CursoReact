@@ -6,31 +6,32 @@ import './App.css';
 function App() {
 
   const [carrito, setCarrito] = useState([]);
+  const[cantidad, setCatidad] = useState(0)
 
-  /* esto esta mal programado y no funciona si primero agregar un item al carro y depues vas a terminar compra*/
   const addItem = (item, cantidad)=> {
     if(carrito.length===0){
       carrito.push([item,cantidad])
     }
     else
-      var ok= true;
-      carrito.map((i)=> {
-      if( (!i.includes(item)) && ok){
+      if(!isInCart(item.title)){
         carrito.push([item,cantidad])
-        ok= false;
       }
-      }
-    )
+      CantidadTotal()
+      console.log(cantidad);
   }
-  const removeItem = (title) => {
+
+  const removeItem = (valor) => {
     carrito.map((i)=> {
-      if ( (i[0].title === title)) {
+      if (i[0].title === valor) {
         var index = carrito.indexOf(i)
-        if(index > -1)
-          carrito.splice(index,1) 
+        setCarrito( carrito.splice(index,1) )
+        console.log('el titulo es:',i[0].title,' el index es: ', index);
     }})}
 
-    const clear = () => setCarrito([])
+    const clear = () => {
+      setCarrito([])
+      setCatidad(0)
+    }
 
     function isInCart (title){
       let ok = false;
@@ -41,12 +42,18 @@ function App() {
       return ok
     }
 
-    
+    function CantidadTotal(){
+      var total= 0.
+      carrito.map((i)=>{
+          total = total + i[1];  
+      })
+      console.log('el total de elmentos es: ',total);
+      setCatidad(total)
+  }
 
-    
   return (
     <div className="App">
-      <CartContext.Provider value={{cart:carrito,addItem:addItem,removeItem:removeItem,clear:clear, isInCart:isInCart}}>
+      <CartContext.Provider value={{cart:carrito,addItem:addItem,removeItem:removeItem,clear:clear, isInCart:isInCart,CantidadTotal:CantidadTotal,cantidad:cantidad}}>
         <RouterApp/>
     </CartContext.Provider>
     </div>

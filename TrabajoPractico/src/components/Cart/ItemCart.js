@@ -9,9 +9,10 @@ function Item (props){
         return(
         
         <div className="ItemCart">
-            <li className="titulo">{props.item.title}</li>
-            <li className="imagen">{props.item.img}</li>
-            <button className={(context.cart.length > 0 ? 'cartButton' : 'noCartButton')} onClick={()=>context.removeItem(props.item.title)}> Quitar</button>
+            <li className="titulo">{props.item[0].title}</li>
+            <li className="imagen">{props.item[0].img}</li>
+            <li className='descripcion' >Cantidad: {props.item[1]}</li>
+            <button className='cartButton' onClick={()=>context.removeItem(props.item[0].title)}> Quitar</button>
         </div>
 
     )

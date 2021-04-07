@@ -36,9 +36,10 @@
         display: inline-block;
         background-color:#283149;
         text-align: center;
-        margin: 2.5%;
-        width: 45%;
+        margin:2em 0% 0px 0%;
+        width: 100%;
         padding: 2em;
+        height: 40em;
     }
     .imagen{
         font-size:8em;

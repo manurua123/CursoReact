@@ -12,8 +12,7 @@ const Cart =()=>{
     function PrecioTotal(){
         var total= 0.
         context.cart.map((i)=>{
-            total = total + (i[0].price*i[1]);
-            
+            total = total + (i[0].price*i[1]);  
         })
         return total;
         
@@ -22,7 +21,7 @@ const Cart =()=>{
     const HayCosas=()=>{
         return(<div className='Cart'>
             {context.cart.map((item, index) => (
-                <ItemCart key={index} item={item[0]} />
+                <ItemCart key={index} item={item} />
              ))}
              <h3> TOTAL: $ <PrecioTotal/> </h3>
             <button className='cartButton' onClick={()=>context.clear()}> Limpiar Carrito</button>
