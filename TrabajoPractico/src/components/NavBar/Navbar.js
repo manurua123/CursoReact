@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { MenuItems } from "./MenuItems";
 import CartWidget from "../CartWidget/CartWidget";
 import {
    

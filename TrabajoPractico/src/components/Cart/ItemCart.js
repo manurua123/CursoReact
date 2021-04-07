@@ -1,7 +1,7 @@
 import React from 'react';
 import './ItemCart.css'
 import CartContext from '../../Context/CartContext'
-import {useContext, useState} from 'react';
+import {useContext} from 'react';
 
 
 function Item (props){

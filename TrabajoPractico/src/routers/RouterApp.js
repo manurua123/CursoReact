@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, NavLink, useParams, Redirect, } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Redirect, } from "react-router-dom";
 import ItemsListContainer from '../components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import Cart from '../components/Cart/Cart'
