@@ -1,17 +1,17 @@
-import React, {useState } from 'react';
+import React from 'react';
 import RouterApp from './routers/RouterApp'
-import CartContext from './Context/CartContext'
 import './App.css';
 import CartProvider from './components/CartProvider/CartProvider';
+import ListaItems2 from './listaItems2';
 
 function App() {
 
-
   return (
     <div className="App">
-      <CartProvider>
+      {/* <ListaItems2/> */}
+       <CartProvider>
         <RouterApp/>
-      </CartProvider>
+      </CartProvider>  
     </div>
   );
 }
