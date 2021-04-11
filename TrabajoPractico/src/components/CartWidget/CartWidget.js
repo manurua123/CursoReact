@@ -4,10 +4,20 @@ import './CartWidget.css'
 
 function CartWidget() {
     const context = useContext(CartContext);
+ 
+    function cantElementos(){
+        var total= 0.
+        context.cart.map((i)=>{
+            total = total + (i[1]);  
+            console.log('que pasa aca')
+        })
+        return total;
+        }
+    
     return (
         <div className='CartWidget'>
             <i className="fas fa-dolly nav-links"></i>
-            {context.cantidad !== 0 ? <p>{context.cantidad}</p> : null}
+            {cantElementos()!== 0 ? <p>{cantElementos()}</p> : null}
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import { getFirestore } from "./configs/firebase";
 import React, { useState } from "react";
+import * as firebase from 'firebase/app';
 import "firebase/firestore";
 
 
