@@ -24,7 +24,7 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
               onAdd(e, valor);
               context.addItem(item,valor)
               }}>Agregar al carro</button>
-            <NavLink className={(valor> 0 & valor <= stock)? 'cartButton' : 'noCartButton'} to='/cart' onClick={()=>context.addItem(item,valor)}>Terminar Compra</NavLink>
+            <NavLink className={(valor> 0 & valor <= stock)? 'cartButton' : 'noCartButton'} to='/cart' onClick={()=>context.addItem(item,valor)}>Comprar</NavLink>
            
           </div>
         </div>

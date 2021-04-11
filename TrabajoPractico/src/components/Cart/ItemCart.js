@@ -16,6 +16,7 @@ function Item (props){
                 <li className='cantidad' >Cantidad: <br />{props.item[1]}</li>
                 <li className='cantidad' >Precio: <br />${props.item[0].price * props.item[1]}</li>
                 <button className='cartButton' onClick={()=>context.removeItem(props.item[0].title)}> Quitar</button>
+                
             </ul>
         </div>
 
