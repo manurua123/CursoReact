@@ -7,33 +7,22 @@ function CartProvider(props) {
     const [carrito, setCarrito] = useState([]);
     const [cantidad, setCatidad] = useState(0)
 
-    const addItem = (item, cantidad)=> {
+    const addItem = (item, cant)=> {
         if(carrito.length===0){
-            carrito.push([item,cantidad])
+            carrito.push([item,cant])
         }
         else{
             if(!isInCart(item.title)){
-            carrito.push([item,cantidad])
+            carrito.push([item,cant])
             }
             else{
-                addCant(item,cantidad)
-            } 
+                addCant(item,cant)
+            }
         }
         cantidadTotal();
     }
 
-    const removeItem = (valor) => {
-        setCarrito(carrito.filter(i => i[0].title != valor));
-        setCatidad(0);
-        cantidadTotal();
-    }
-
-    const clear = () => {
-        setCarrito([])
-        setCatidad(0)
-    }
-
-    function isInCart (title){
+    const isInCart =(title)=>{
         let ok = false;
         carrito.map((i)=>{
         if(i[0].title===title)
@@ -42,16 +31,32 @@ function CartProvider(props) {
         return ok
     }
 
-    function addCant(item, cant){
+    const addCant=(item, cant)=>{
         carrito.map((i)=>{
             if(i[0]===item)
                 i[1] = i[1]+cant
             })
     }
 
-    function cantidadTotal(){
+    const removeItem = (valor) => {
+        if(carrito.length === 1)
+            clear();
+        else{
+            setCarrito(carrito.filter(i => i[0].title !== valor));
+            cantidadTotal();
+        }
+    }
+
+    const clear = () => {
+        setCarrito([])
+        setCatidad(0)
+    }
+    const cantidadTotal=()=>{
         setCatidad(carrito.reduce((prev,next)=> prev + next[1],0))
     }
+
+
+
 
     const { children } = props;
     return(
