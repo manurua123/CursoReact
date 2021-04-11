@@ -1,4 +1,5 @@
 
+import React from 'React'
 
 function FuncionEjemplo({title , description}) {
   return (
