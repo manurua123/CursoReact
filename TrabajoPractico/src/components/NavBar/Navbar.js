@@ -11,7 +11,6 @@ import FirebaseContext from '../../Context/FirebaseContext'
 const Navbar = () => {
     const context = useContext(FirebaseContext);
     const [state, setState] = useState(false);
-
     function handleClick (){
         setState(!state)
     }
@@ -31,7 +30,9 @@ const Navbar = () => {
                 <li>
                     <DropdownButton id="dropdown-basic-button" title="Categorias">
                         
-                        {/* <Dropdown.Item><NavLink to={`/category/${c}`}><p className='nav-links'>{c}</p></NavLink> </Dropdown.Item> */}
+                        <Dropdown.Item><NavLink to={`/category/Foods`}><p className='nav-links'>Foods</p></NavLink> </Dropdown.Item> 
+                        <Dropdown.Item><NavLink to={`/category/Vehicles`}><p className='nav-links'>Vehicles</p></NavLink> </Dropdown.Item>
+                        <Dropdown.Item><NavLink to={`/category/Animals`}><p className='nav-links'>Animals</p></NavLink> </Dropdown.Item>
                     </DropdownButton>
                 </li>
                 <li ><NavLink to="/"><p className='nav-links'>Nosotros</p></NavLink></li>

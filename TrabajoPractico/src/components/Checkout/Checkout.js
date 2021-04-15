@@ -3,9 +3,10 @@ import CartContext from '../../Context/CartContext'
 import FirebaseContext from '../../Context/FirebaseContext'
 
 const Checkout = () => {
-S
+    const firebaseContext = useContext(FirebaseContext);
+    const cart = useContext(CartContext);
 
-
+    
 
 
 
