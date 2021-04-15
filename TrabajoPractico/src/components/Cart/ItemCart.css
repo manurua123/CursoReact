@@ -16,16 +16,13 @@
   margin-bottom: 5em;
   margin-top: 1em;
   border: none;
-  
 }
 .limpiarCarro:hover {
   color: #f73859;
 }
-
 .CartItemList {
   text-align: center;
 }
-
 .ItemCart {
   background: #f9f3f3;
   width: 100%;
@@ -46,7 +43,6 @@
   font-size: small;
   color: #283149;
 }
-
 .noCart {
   padding-top: 5em;
   text-align: center;

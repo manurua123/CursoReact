@@ -4,8 +4,6 @@ import ItemCart from './ItemCart'
 import { NavLink } from 'react-router-dom';
 import './ItemCart.css'
 
-
-
 const Cart = () => {
     const context = useContext(CartContext);
 
@@ -15,7 +13,6 @@ const Cart = () => {
             total = total + (i[0].price * i[1]);
         })
         return total;
-
     }
 
     const HayCosas = () => {
@@ -30,26 +27,25 @@ const Cart = () => {
                     <li><button className=' limpiarCarro' onClick={() => context.clear()}> Eliminar todo</button> </li>
                     <li><h3 className='montoTotal'> Monto total   $ <PrecioTotal /> </h3></li>
                     <li><><NavLink className='cartButton terminarCompra' to='/formClient' >Terminar Compra</NavLink></></li>
-
                 </ul>
             </div>)
     }
-    function NoHayCosas(props) {
-        return (<div className='noCart'>
-            <i class="fas fa-shopping-basket"></i>
-            <h3>Tu carrito esta vacio</h3>
-            <NavLink className='cartButton' to='/' >Ver Productos</NavLink>
 
-        </div>)
-
+    const NoHayCosas=(props) =>{
+        return (
+            <div className='noCart'>
+                <i class="fas fa-shopping-basket"></i>
+                <h3>Tu carrito esta vacio</h3>
+                <NavLink className='cartButton' to='/' >Ver Productos</NavLink>
+            </div>
+        )
     }
+
     function Evalution() {
         return (
             (context.cart.length === 0 ? <NoHayCosas /> : <HayCosas />)
         )
     }
-
-
     return (
         <div>
             <Evalution />

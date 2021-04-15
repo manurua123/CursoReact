@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './ItemsListContainer.css';
 import ItemList from "../ItemsList/ItemList"
-import {useParams, } from "react-router-dom";
-import ListaItems from '../../ListaItems'
+import { useParams, } from "react-router-dom";
+// import ListaItems from '../../ListaItems'
+import FirebaseContext from '../../Context/FirebaseContext'
 
-
-const ItemsListContainer =(props) =>  {
+const ItemsListContainer = (props) => {
+    const context = useContext(FirebaseContext);
     let { id } = useParams();
-    return(
+    return (
         <div className='ItemsListContainer'>
-            {<ItemList items={(id ? (ListaItems.filter(item=> item.category === id)) : ListaItems  )}/> }
+            {/* {console.log('a ItemLisContainer llegan:', context.getAll())} */}
+            {<ItemList items={(id ? (context.getByFilter(id)) : context.getAll())} />}
         </div>
     )
-    }
+}
 
 export default ItemsListContainer

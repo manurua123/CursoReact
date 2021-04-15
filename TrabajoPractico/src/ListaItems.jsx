@@ -13,5 +13,4 @@ const ListaItems = [
   { title: 'Frog', category: 'Animals', description: 'una breve descripcion del objeto', img: <i class="fas fa-frog"></i>, stock: 10, price: 12345,  },
   { title: 'IceCream', category: 'Foods', description: 'una breve descripcion del objeto', img: <i class="fas fa-ice-cream"></i>, stock: 10, price: 7348,  },
 ]
-
 export default ListaItems

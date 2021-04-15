@@ -10,7 +10,7 @@ function ListaItems2() {
 
   function getAll() {
     const productos = db.collection("productos");
-    const items=[]
+    const items = []
     productos.get().then((res) => {
       if (res.size > 0) {
         res.docs.map((d) => {
@@ -26,13 +26,13 @@ function ListaItems2() {
 
   function getByFilter(category) {
     const productos = db.collection("productos").where("category", "==", category);
-    const items=[]
-      productos.get().then((res) => {
+    const items = []
+    productos.get().then((res) => {
       if (res.size > 0) {
         res.docs.map((d) => {
           items.push({
-          id: d.id,
-          ...d.data(),
+            id: d.id,
+            ...d.data(),
           });
         });
       }
@@ -40,20 +40,17 @@ function ListaItems2() {
     return items;
   }
 
-return (
-<div className="App">
-<h1>UN TITULO</h1>
-<br />
-{
-console.log('todos los elementos : ',getAll())
+   function udpdateStock(id,cant){
+      var datoRef = db.collection("productos").doc(id);
+      const dato= datoRef.update({
+        stock: cant
+    })
+  }
+
 }
 
-{
-console.log('todos los elementos de una categoria: ',getByFilter('Foods'))
-}
-{getByFilter('Foods')[1]}
-</div>
-);
-}
+
+
+
 
 export default ListaItems2;

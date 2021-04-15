@@ -43,12 +43,10 @@ function CartProvider(props) {
     const clear = () => {
         setCarrito([])
     }
+
     const cantidadTotal = () => {
         setCatidad(carrito.reduce((prev, next) => prev + next[1], 0))
     }
-
-
-
 
     const { children } = props;
     return (

@@ -1,105 +1,95 @@
-
-.contenido{
+.contenido {
   background-color: #f9f3f3;
   align-items: center;
   text-align: center;
-  margin:2em 10%;  
+  margin: 2em 10%;
   width: 80%;
   padding: 1em;
   color: black;
   border: 2px solid #283149;
   border-radius: 5px;
 }
-.box1{
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    align-items: center;
-    border: 2px solid #283149;
-    background-color: #f9f3f3;
-    border-radius: 5px;
-    margin-bottom: 1em;
-    width: 100%;
-    margin-top: 0.5em;
+.box1 {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  align-items: center;
+  border: 2px solid #283149;
+  background-color: #f9f3f3;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  width: 100%;
+  margin-top: 0.5em;
 }
-.sub{
+.sub {
   align-items: initial;
 }
-.changeButton{
-    padding: 0.5em;
-    background-color:transparent;
-    color: #283149;
-    transition-duration: 0.2s;
-    border:0px;
-    font-size: large;
+.changeButton {
+  padding: 0.5em;
+  background-color: transparent;
+  color: #283149;
+  transition-duration: 0.2s;
+  border: 0px;
+  font-size: large;
 }
-
 .changeButton:hover {
-    color: #f73859;
-  }
-
-
-.sendButton{
+  color: #f73859;
+}
+.sendButton {
   border: 2px solid #283149;
   background-color: #f73859;
   color: #283149;
-  padding: 0.5em 1em ;
+  padding: 0.5em 1em;
   margin-right: 2em;
-
   font-size: large;
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
 }
-
-.sendButton:hover{
+.sendButton:hover {
   color: #283149;
-  background-color:#f9f3f3;
+  background-color: #f9f3f3;
 }
-
-.noSendButton{
+.noSendButton {
   border: 2px solid #283149;
   background-color: #f9f3f3;
-  padding: 0.5em 1em ;
+  padding: 0.5em 1em;
   color: #283149;
   font-size: large;
-    border-radius: 5px;
+  border-radius: 5px;
   cursor: not-allowed;
   font-size: large;
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
 }
-
-.cartButton{
+.cartButton {
   border: 2px solid #283149;
   background-color: #f73859;
   color: #283149;
-  padding: 0.5em 1em ;
-
+  padding: 0.5em 1em;
   font-size: large;
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
 }
-.cartButton:hover{
+.cartButton:hover {
   color: #283149;
-  background-color:#f9f3f3;
+  background-color: #f9f3f3;
 }
-.noCartButton{
+.noCartButton {
   display: none;
 }
 
 @media screen and (max-width: 960px) {
-  .contenido{
+  .contenido {
     background-color: #f9f3f3;
     align-items: center;
     text-align: center;
-    margin:2em 5%;  
+    margin: 2em 5%;
     width: 90%;
     padding: 1em;
     color: black;
     border: 2px solid #283149;
     border-radius: 5px;
-   
   }
 }
