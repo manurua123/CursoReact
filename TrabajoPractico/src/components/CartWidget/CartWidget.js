@@ -9,7 +9,7 @@ function CartWidget() {
         var total = 0.
         context.cart.map((i) => {
             total = total + (i[1]);
-            console.log('que pasa aca')
+            
         })
         return total;
     }
