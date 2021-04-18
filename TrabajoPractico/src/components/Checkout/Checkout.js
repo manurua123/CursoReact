@@ -24,6 +24,7 @@ const Checkout = () => {
     const active = () => {
         cartContext.clear()
         firebaseContext.createOrder(datos)
+        firebaseContext.actualizarStock(datos.cart)
     }
     return (
         <div className='checkoutContainer'>

@@ -18,7 +18,7 @@ const RouterApp = () => {
         <Route path="/category/:id?" children={<ItemsListContainer />} />
         <Route path='/cart' exact children={<Cart />} />
         <Route path='/checkout' exact children={<Checkout />} />
-        <Route path='/finish' exact children={<Finish/>} />
+        <Route path='/finish/:id?' exact children={<Finish/>} />
         <Route path='/' exact children={<ItemsListContainer />} />
         <Redirect to='/' />
       </Switch>

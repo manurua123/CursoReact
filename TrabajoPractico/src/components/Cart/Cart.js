@@ -23,7 +23,7 @@ const Cart = () => {
             </div>)
     }
 
-    const NoHayCosas=(props) =>{
+    const NoHayCosas=() =>{
         return (
             <div className='noCart'>
                 <i class="fas fa-shopping-basket"></i>
