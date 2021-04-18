@@ -1,30 +1,30 @@
+import firebase from "firebase/app";
+import React, { useState} from "react";
 import { getFirestore } from "../../configs/firebase";
-import React, { useState, useContext } from "react";
-import * as firebase from 'firebase/app';
 import "firebase/firestore";
 import FirebaseContex from '../../Context/FirebaseContext'
-import CartContext from '../../Context/CartContext'
+
 
 
 function FirebaseProvider(props) {
-    const cart = useContext(CartContext);
+
     const [db, setDb] = useState(getFirestore());
-    //const [items, setItems]= useState([])
+    const [lastId, setLastId] = useState();
 
     function getAll() {
         const items = []
-        var docRef = db.collection("productos").get().then((ok)=>{
-            ok.forEach((doc)=>{
-                items.push(doc.data()) //agrega cada elemento a un array 
+        var docRef = db.collection("productos").get().then((ok) => {
+            ok.forEach((doc) => {
+                items.push(doc.data()) //agrega cada elemento a un array
             })
         })
         return items;
     }
 
-    function categorias(){
+    function categorias() {
         const categorias = []
-        var docRef = db.collection("categorias").get().then((ok)=>{
-            ok.forEach((doc)=>{
+        var docRef = db.collection("categorias").get().then((ok) => {
+            ok.forEach((doc) => {
                 categorias.push(doc.data().name) //agrega las categorias a un array 
             })
         })
@@ -38,34 +38,52 @@ function FirebaseProvider(props) {
             if (res.size > 0) {
                 res.docs.map((doc) => {
                     items.push(doc.data())
-                    });
+                });
             }
         });
         return items;
     }
-
-    function udpdateStock(id, cant) {
-        var datoRef = db.collection("productos").doc(id);
-        const dato = datoRef.update({
-            stock: cant
+    function createOrder(datos) {
+        const productos = []
+        datos.cart.cart.map((i) => {
+            productos.push({ id: i[0].title, price: i[0].price, quantity: i[1] })
+        })
+        const newOrder = {
+            user: { nombre: datos.nombre, telefono: datos.telefono, email: datos.email },
+            products: productos,
+            state: 'generada',
+            total: datos.cart.PrecioTotal(),
+            createOn: firebase.firestore.Timestamp.fromDate(new Date()),
+        };
+        const orders = db.collection("orders");
+        orders.add(newOrder).then((resp) => {
+            setLastId(resp.id);
         })
     }
-    function verStock(id) {
-        var datoRef = db.collection("productos").doc(id);
-        console.log(datoRef)
-        return datoRef.stock;
-    }
+
+
+
+
+
+
+
 
     const { children } = props;
-    return (
-        <FirebaseContex.Provider value={{ getAll: getAll, getByFilter: getByFilter,verStock:verStock, categorias:categorias }}>
-            {children}
-        </FirebaseContex.Provider>
-    )
-}
+        return (
+            <FirebaseContex.Provider value={{
+                getAll: getAll,
+                getByFilter: getByFilter,
+                categorias: categorias,
+                createOrder: createOrder,
+                lastId: lastId
+            }}>
+                {children}
+            </FirebaseContex.Provider>
+        )
+    }
 
 
 
 
 
-export default FirebaseProvider;
+    export default FirebaseProvider;

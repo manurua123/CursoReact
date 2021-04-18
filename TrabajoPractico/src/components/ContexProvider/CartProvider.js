@@ -47,10 +47,29 @@ function CartProvider(props) {
     const cantidadTotal = () => {
         setCatidad(carrito.reduce((prev, next) => prev + next[1], 0))
     }
+  
+    function PrecioTotal() {
+        var total = 0.
+        carrito.map((i) => {
+            total = total + (i[0].price * i[1]);
+        })
+        return total;
+    }
 
+    
     const { children } = props;
     return (
-        <CartContext.Provider value={{ cart: carrito, addItem: addItem, removeItem: removeItem, clear: clear, isInCart: isInCart, CantidadTotal: cantidadTotal, cantidad: cantidad }}>
+        <CartContext.Provider value={{
+            cart: carrito,
+            cantidad: cantidad,
+            addItem: addItem,
+            removeItem: removeItem,
+            clear: clear,
+            isInCart: isInCart,
+            CantidadTotal: cantidadTotal,
+            PrecioTotal: PrecioTotal,
+           
+        }}>
             {children}
         </CartContext.Provider>
     )

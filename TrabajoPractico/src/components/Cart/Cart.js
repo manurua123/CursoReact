@@ -7,14 +7,6 @@ import './ItemCart.css'
 const Cart = () => {
     const context = useContext(CartContext);
 
-    function PrecioTotal() {
-        var total = 0.
-        context.cart.map((i) => {
-            total = total + (i[0].price * i[1]);
-        })
-        return total;
-    }
-
     const HayCosas = () => {
         return (
             <div className='Cart'>
@@ -25,8 +17,8 @@ const Cart = () => {
                 </div>
                 <ul className='botonesCarrito'>
                     <li><button className=' limpiarCarro' onClick={() => context.clear()}> Eliminar todo</button> </li>
-                    <li><h3 className='montoTotal'> Monto total   $ <PrecioTotal /> </h3></li>
-                    <li><><NavLink className='cartButton terminarCompra' to='/formClient' >Terminar Compra</NavLink></></li>
+                    <li><h3 className='montoTotal'> Monto total   $ {context.PrecioTotal()} </h3></li>
+                    <li><><NavLink className='cartButton terminarCompra' to='/checkout' >Terminar Compra</NavLink></></li>
                 </ul>
             </div>)
     }

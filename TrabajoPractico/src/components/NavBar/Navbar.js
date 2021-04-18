@@ -1,9 +1,8 @@
-import React, { Component, useContext, useState } from 'react';
+import React, {useContext, useState } from 'react';
 import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-
 import './Navbar.css'
 import FirebaseContext from '../../Context/FirebaseContext'
 
