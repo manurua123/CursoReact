@@ -25,14 +25,12 @@ function FirebaseProvider(props) {
         const productos = db.collection("categorias");
         const cat =[]
         productos.get().then((res) => {
-          if (res.size > 0) {
-            res.docs.map((d) => {
-            cat.push(d.data().name)
-            });
-          }
-        });
-        return (cat)
-      }
+          res.forEach((doc)=>{
+              cat.push(doc.id)
+          })
+      })
+      return cat;
+    }
 
     function getByFilter(category) {
         const items = []
