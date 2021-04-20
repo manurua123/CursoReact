@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
 import './ItemList.css'
 
 
 function Item(props) {
+    
     return (
         <div className="ContenedoLink">
-            {/* {console.log('A item llega: ', props.item)} */}
             <Link className="LinkProducto" to={`/item/${props.item.title}`} >
-                <li className="titulo">{props.item.title}</li>
-                <li className="imagen">{props.item.img}</li>
+                
+                <li className="imagen">
+                 <i class={props.item.img}></i>
+                </li>
+                <li className="titulo "> {props.item.title}</li>
             </Link>
         </div>
     )

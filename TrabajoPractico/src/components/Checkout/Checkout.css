@@ -10,11 +10,11 @@
 }
 
 .checkoutItemList ul {
-  background: #f9f3f3;
+  background: #f4eee8;
   width: 100%;
   margin-top: 0.2em;
   list-style: none;
-  color: #283149;
+  color: #222831;
 }
 .checkoutItemList li {
   display: inline-block;
@@ -32,12 +32,13 @@
 .checkoutForm {
   float: right;
   width: 40%;
-  border: 2px solid #404b69;
+  border: 2px solid #ffc93c;
   border-radius: 5px;
   height: 450px;
   margin-right: 5%;
   padding: 2em 1em;
   text-align: center;
+  background: #dddddd;
 }
 .checkoutForm h3 {
   text-align: center;
@@ -63,9 +64,6 @@
   border-radius: 2px;
 }
 
-.checkoutForm button {
-  margin-top: 1em;
-}
 
 @media screen and (max-width: 960px) {
   .checkoutContainer {

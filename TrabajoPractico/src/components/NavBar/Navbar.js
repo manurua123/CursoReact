@@ -16,8 +16,14 @@ const Navbar = () => {
         setState(!state)
     }
 
-    console.log('Llegaron las categortias:', context.getCategorias())
-    console.log('Largo del array:', context.getCategorias().length)
+    const cats = async()=>{
+        const resp = await context.getCategorias()
+        setCategorias(resp)
+    }
+    useEffect(()=>{
+        cats();
+    },[])
+
     return (
         <nav className="NavbarItems">
             <NavLink to='/'> <h1 className="navbar-logo">Curso React<i className="fab fa-react"></i></h1></NavLink>
@@ -27,9 +33,9 @@ const Navbar = () => {
             <ul className={state ? 'nav-menu active' : 'nav-menu'}>
                 <li>
                     <DropdownButton id="dropdown-basic-button" title="Categorias">
-                        <Dropdown.Item><NavLink to={`/category/Foods`}><p className='nav-links'>Foods</p></NavLink> </Dropdown.Item>
-                        <Dropdown.Item><NavLink to={`/category/Vehicles`}><p className='nav-links'>Vehicles</p></NavLink> </Dropdown.Item>
-                        <Dropdown.Item><NavLink to={`/category/Animals`}><p className='nav-links'>Animals</p></NavLink> </Dropdown.Item>
+                        {categorias.map((i)=>
+                             <Dropdown.Item><NavLink to={ `/category/${i}`}><p className='nav-links'>{i}</p></NavLink> </Dropdown.Item>
+                        )}
                     </DropdownButton>
                 </li>
                 <li ><NavLink to="/cart"><CartWidget /></NavLink></li>

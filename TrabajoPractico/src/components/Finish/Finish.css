@@ -1,13 +1,14 @@
 .finish{
     padding-top: 6em;
     text-align: center;
+    color: #dddddd; 
 }
 
 .finish .fas{
     font-size: 10em;
     margin-top: 30px;
     padding-bottom: 0.5em;
-    color: #f73859;
+    color: #ffc93c;
 }
 .finish h4{
     margin-bottom: 2em;

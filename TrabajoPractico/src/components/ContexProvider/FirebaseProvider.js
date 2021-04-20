@@ -1,5 +1,5 @@
 import firebase from "firebase/app";
-import React, { useState } from "react";
+import React, {useState } from "react";
 import { getFirestore } from "../../configs/firebase";
 import "firebase/firestore";
 import FirebaseContex from '../../Context/FirebaseContext'
@@ -9,41 +9,26 @@ import FirebaseContex from '../../Context/FirebaseContext'
 function FirebaseProvider(props) {
     const [db, setDb] = useState(getFirestore());
     const [lastId, setLastId] = useState();
-    const [categorias, setCategirias]=useState()
 
-    function getAll() {
-        const items = []
-        var docRef = db.collection("productos").get().then((ok) => {
-            ok.forEach((doc) => {
-                items.push(doc.data()) //agrega cada elemento a un array
-            })
-        })
-        return items;
+
+    const getAll= async()=> {
+        const productos = await db.collection("productos").get();
+        const prod =[]
+        productos.forEach((doc) => {
+            prod.push(doc.data())
+        });
+      return prod;
     }
 
-    function getCategorias() {
-        const productos = db.collection("categorias");
+     const getCategorias= async()=> {
+        const productos = await db.collection("categorias").get();
         const cat =[]
-        productos.get().then((res) => {
-          res.forEach((doc)=>{
-              cat.push(doc.id)
-          })
-      })
+        productos.forEach((doc) => {
+            cat.push(doc.id)
+        });
       return cat;
     }
 
-    function getByFilter(category) {
-        const items = []
-        const productos = db.collection("productos").where("category", "==", category);
-        productos.get().then((res) => {
-            if (res.size > 0) {
-                res.docs.map((doc) => {
-                    items.push(doc.data())
-                });
-            }
-        });
-        return items;
-    }
     function createOrder(datos) {
         const productos = []
         datos.cart.cart.map((i) => {
@@ -91,7 +76,6 @@ function FirebaseProvider(props) {
         <FirebaseContex.Provider value={{
             lastId: lastId,
             getAll: getAll,
-            getByFilter: getByFilter,
             createOrder: createOrder,
             actualizarStock: actualizarStock,
             viewOrder:viewOrder,

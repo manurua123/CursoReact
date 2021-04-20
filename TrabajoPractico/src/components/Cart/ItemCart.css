@@ -5,6 +5,7 @@
 }
 .Cart h3 {
   margin: 1em 0px;
+  color:#dddddd;
 }
 .botonesCarrito {
   list-style: none;
@@ -16,15 +17,16 @@
   margin-bottom: 5em;
   margin-top: 1em;
   border: none;
+  color: #dddddd;
 }
 .limpiarCarro:hover {
-  color: #f73859;
+  color: #ffc93c;
 }
 .CartItemList {
   text-align: center;
 }
 .ItemCart {
-  background: #f9f3f3;
+  background: #f8f5f1;
   width: 100%;
   margin-top: 0.2em;
   list-style: none;
@@ -39,6 +41,7 @@
 .ItemCart .imagen {
   font-size: 6em;
 }
+
 .titulo p {
   font-size: small;
   color: #283149;
@@ -50,11 +53,13 @@
 .noCart .fas {
   font-size: 10em;
   margin-top: 30px;
-  color: #f73859;
+  color: #ffc93c;
 }
 .noCart h3 {
   padding: 30px 0px;
+  color:#dddddd;
 }
+
 
 @media screen and (max-width: 960px) {
 }

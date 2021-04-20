@@ -1,11 +1,12 @@
 .NavbarItems {
-  background: linear-gradient(90deg, #283149 10%, #404b69 40%);
+  background: #222831;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   text-decoration: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 .NavbarItems a {
   text-decoration: none;
@@ -18,18 +19,19 @@ NavLink {
   border: none;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
-  color: #f9f3f3;
+  color: #dddddd;
 }
 .dropdown-toggle:hover {
-  background-color: #f73859;
-  border-radius: 4px;
+  background-color: #ffc93c;
   transition: all 0.2s ease-out;
-  color: #283149;
+  color: #222831;
+  border-radius: 4px;
 }
 .show {
-  background-color: #404b69;
+  background-color: #222831;
   border-bottom: 4px;
   text-decoration: none;
+  border-radius: 0%;
 }
 .dropdown-item {
   margin: 0px 10px;
@@ -43,16 +45,16 @@ NavLink {
   float: left;
   min-width: 10rem;
   font-size: 1rem;
-  color: #212529;
+  color: #dddddd;
   text-align: left;
   list-style: none;
   background-clip: padding-box;
   text-align: center;
   padding: 1em;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 .navbar-logo {
-  color: #f73859;
+  color: #ffc93c;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -73,39 +75,31 @@ NavLink {
   text-decoration: none;
 }
 .nav-links {
-  color: #f9f3f3;
+  color: #dddddd;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
 .nav-links:hover {
-  background-color: #f73859;
+  background-color: #ffc93c;
   border-radius: 4px;
   transition: all 0.2s ease-out;
-  color: #283149;
+  color: #222831;
 }
 .menu-icon {
   display: none;
 }
-.searchterm {
-  padding: 5px 0px;
-}
-.search {
-  background-color: transparent;
-  color: #f9f3f3;
-  border: none;
-  font-size: large;
-}
+
 
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
-    background: #283149;
+    background: #5eaaa8;
   }
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 370px;
+    height: 140px;
     position: absolute;
     top: 80px;
     left: -100%;
@@ -113,7 +107,7 @@ NavLink {
     transition: all 0.5s ease;
   }
   .nav-menu.active {
-    background: #283149;
+    background: #4a47a3;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -145,15 +139,15 @@ NavLink {
     cursor: pointer;
   }
   .fa-times {
-    color: #f73859;
+    color: #5eaaa8;
     font-size: 2rem;
   }
   .fa-bars {
-    color: #f73859;
+    color: #5eaaa8;
   }
   .dropdown-toggle {
-    padding: 2rem;
-    color: #f9f3f3;
+    padding: 1rem;
+    color: #5eaaa8;
     width: 100%;
   }
 }

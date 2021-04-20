@@ -1,12 +1,12 @@
 .CartWidget {
-  color: aliceblue;
+  color: #222831;
   position: absolute;
 }
 .CartWidget p {
   position: relative;
   top: -50px;
   left: 1px;
-  background-color: #f73859;
+  background-color: #ffc93c;
   border-radius: 5px;
   padding: 0px;
   font-size: small;
@@ -30,7 +30,7 @@
   }
   .CartWidget p {
     position: absolute;
-    background-color: #f73859;
+    background-color: #ffc93c;
     top: 0px;
     left: 450px;
     border-radius: 5px;

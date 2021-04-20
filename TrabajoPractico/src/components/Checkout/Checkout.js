@@ -44,7 +44,7 @@ const Checkout = () => {
                 <label for="nombre">Repite el Email</label>
                 <input type="text" onChange={handleInputChange} name="email2"></input>
                 <h3>TOTAL $ {cartContext.PrecioTotal()}</h3>
-                <NavLink className={datos.email === datos.email2 ? 'cartButton' : 'noCartButton'} to='/finish' onClick={() => active()} > boton test </NavLink>
+                <NavLink className={datos.email === datos.email2 ? 'cartButton' : 'noCartButton'} to='/finish' onClick={() => active()} > Comprar </NavLink>
             </form>
         </div >
     )
