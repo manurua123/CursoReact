@@ -55,8 +55,6 @@
 .checkoutForm input {
   width: 70%;
   padding: 10px 0px;
-  border: 1px solid #f6f6f6;
-  border-radius: 3px;
   background-color: #f6f6f6;
   margin: 8px 0;
   display: inline-block;
@@ -64,7 +62,17 @@
   border-radius: 2px;
 }
 
-
+.noButton{
+  border: 2px solid #bfbfbf;
+  background-color: #f0f0f0;
+  color: #bfbfbf;
+  padding: 0.5em 1em;
+  font-size: large;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  pointer-events: none;
+}
 @media screen and (max-width: 960px) {
   .checkoutContainer {
     padding-top: 2em;
@@ -81,15 +89,5 @@
     width: 90%;
     margin: 2em 5%;
   }
-  .checkoutForm input {
-    width: 70%;
-    padding: 10px 0px;
-    border: 1px solid #f6f6f6;
-    border-radius: 3px;
-    background-color: #f6f6f6;
-    margin: 8px 0;
-    display: inline-block;
-    border: 2px solid #404b69;
-    border-radius: 2px;
-  }
+  
 }

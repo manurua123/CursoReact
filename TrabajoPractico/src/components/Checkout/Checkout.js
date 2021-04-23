@@ -1,25 +1,35 @@
 import React, { useContext, useState } from 'react';
-import CartContext from '../../Context/CartContext'
-import FirebaseContext from '../../Context/FirebaseContext'
+import CartContext from '../../context/CartContext'
+import FirebaseContext from '../../context/FirebaseContext'
 import CheckoutItem from './CheckoutItem'
 import { NavLink } from 'react-router-dom';
-import './Checkout.css'
+import '../../styles/Checkout.css'
+
 
 const Checkout = () => {
     const firebaseContext = useContext(FirebaseContext);
     const cartContext = useContext(CartContext);
+    const [validado, setValidado] = useState(false)
     const [datos, setDatos] = useState({
         nombre: '',
-        telefono: '',
+        telefono: 0,
         email: '',
         cart: cartContext,
-        email2: '*'
     })
     const handleInputChange = (event) => {
         setDatos({
             ...datos,
             [event.target.name]: event.target.value
         })
+        validarDatos(event.target)
+    }
+    function validarDatos(e) {
+        if(e.value !=='')
+            if(e.name === 'email2' && e.value === datos.email){
+            setValidado(true)
+            return(true)
+        }
+        setValidado(false)
     }
     const active = () => {
         cartContext.clear()
@@ -38,13 +48,13 @@ const Checkout = () => {
                 <label for="nombre">Nombre y apellido</label>
                 <input type="text" onChange={handleInputChange} name="nombre"></input>
                 <label for="nombre">Telefono</label>
-                <input type="text" onChange={handleInputChange} name="telefono"></input>
+                <input type="number" onChange={handleInputChange} name="telefono"></input>
                 <label for="nombre">Email</label>
-                <input type="text" onChange={handleInputChange} name="email"></input>
+                <input type="email" className onChange={handleInputChange} name="email"></input>
                 <label for="nombre">Repite el Email</label>
                 <input type="text" onChange={handleInputChange} name="email2"></input>
                 <h3>TOTAL $ {cartContext.PrecioTotal()}</h3>
-                <NavLink className={datos.email === datos.email2 ? 'cartButton' : 'noCartButton'} to='/finish' onClick={() => active()} > Comprar </NavLink>
+                <NavLink className={validado ? 'cartButton' : 'noButton'} to='/finish' onClick={() => active()} > Comprar </NavLink>
             </form>
         </div >
     )

@@ -7,6 +7,8 @@
   font-size: 1.2rem;
   text-decoration: none;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
 }
 .NavbarItems a {
   text-decoration: none;
@@ -89,11 +91,10 @@ NavLink {
   display: none;
 }
 
-
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
-    background: #5eaaa8;
+    background: #222831;
   }
   .nav-menu {
     display: flex;
@@ -107,7 +108,7 @@ NavLink {
     transition: all 0.5s ease;
   }
   .nav-menu.active {
-    background: #4a47a3;
+    background: #222831;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -139,15 +140,15 @@ NavLink {
     cursor: pointer;
   }
   .fa-times {
-    color: #5eaaa8;
+    color: #ffc93c;
     font-size: 2rem;
   }
   .fa-bars {
-    color: #5eaaa8;
+    color: #ffc93c;
   }
   .dropdown-toggle {
     padding: 1rem;
-    color: #5eaaa8;
+
     width: 100%;
   }
 }

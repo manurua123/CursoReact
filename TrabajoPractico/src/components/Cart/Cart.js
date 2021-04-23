@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import CartContext from '../../Context/CartContext'
+import CartContext from '../../context/CartContext'
 import ItemCart from './ItemCart'
 import { NavLink } from 'react-router-dom';
-import './ItemCart.css'
+import '../../styles/ItemCart.css'
 
 const Cart = () => {
     const context = useContext(CartContext);
@@ -33,14 +33,9 @@ const Cart = () => {
         )
     }
 
-    function Evalution() {
-        return (
-            (context.cart.length === 0 ? <NoHayCosas /> : <HayCosas />)
-        )
-    }
     return (
         <div>
-            <Evalution />
+            {(context.cart.length === 0 ? <NoHayCosas /> : <HayCosas />)}
         </div>
     );
 }

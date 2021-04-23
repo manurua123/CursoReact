@@ -4,7 +4,6 @@ import ItemsListContainer from '../components/ItemListContainer/ItemListContaine
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import Cart from '../components/Cart/Cart'
 import Checkout from '../components/Checkout/Checkout'
-import './RouterApp.css'
 import Navbar from "../components/NavBar/Navbar";
 import Finish from "../components/Finish/Finish";
 

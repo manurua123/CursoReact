@@ -5,14 +5,13 @@ import CartProvider from './components/ContexProvider/CartProvider';
 import FirebaseProvider from './components/ContexProvider/FirebaseProvider';
 
 function App() {
-
   return (
     <div className="App">
       <CartProvider>
         <FirebaseProvider>
-           <RouterApp/>
-           </FirebaseProvider>
-      </CartProvider> 
+          <RouterApp />
+        </FirebaseProvider>
+      </CartProvider>
     </div>
   );
 }

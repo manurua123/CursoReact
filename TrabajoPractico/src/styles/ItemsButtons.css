@@ -80,6 +80,14 @@
   display: none;
 }
 
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
 @media screen and (max-width: 960px) {
   .contenido {
     background-color: #f4eee8;
@@ -88,7 +96,7 @@
     margin: 2em 5%;
     width: 90%;
     padding: 1em;
-    color: black;
+    color: #283149;
     border: 2px solid #283149;
     border-radius: 5px;
   }

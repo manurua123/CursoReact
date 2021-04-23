@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
-import './ItemsButtons.css'
+import '../../styles/ItemsButtons.css'
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import CartContext from '../../Context/CartContext'
+import CartContext from '../../context/CartContext'
 
 const ItemCount = ({ stock, initial, onAdd, item }) => {
   const [valor, setDatos] = useState(initial)

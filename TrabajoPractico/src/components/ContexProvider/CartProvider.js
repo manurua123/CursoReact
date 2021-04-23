@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CartContext from '../../Context/CartContext'
+import CartContext from '../../context/CartContext'
 
 
 function CartProvider(props) {

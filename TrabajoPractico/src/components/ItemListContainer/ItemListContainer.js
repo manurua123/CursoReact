@@ -1,14 +1,13 @@
 import React, { useContext, useEffect,useState } from 'react';
-import './ItemsListContainer.css';
+import '../../styles/ItemsListContainer.css';
 import ItemList from "../ItemsList/ItemList"
 import { useParams, } from "react-router-dom";
-import FirebaseContext from '../../Context/FirebaseContext'
+import FirebaseContext from '../../context/FirebaseContext'
 
 const ItemsListContainer = (props) => {
     const context = useContext(FirebaseContext);
     const [productos, setProductos] = useState([])
-    let { id } = useParams();
-
+    const { id } = useParams();
 
     const prod = async()=>{
         const resp = await context.getAll()
@@ -20,9 +19,8 @@ const ItemsListContainer = (props) => {
 
     return (
         <div className='ItemsListContainer'>
-            <ItemList items={(id ? (productos.filter(i=>i.category===id)) : productos)} /> 
-
-            {/* {<ItemList items={(id ? (ListaItems.filter(i=>i.category===id)) : ListaItems)} />} */}
+            {console.log('los productos son:',productos)}
+            <ItemList items={(id ? (productos.filter(i=>i.category===id)) : productos)} />
         </div>
     )
 }

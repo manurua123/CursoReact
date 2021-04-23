@@ -3,8 +3,8 @@ import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-import './Navbar.css'
-import FirebaseContext from '../../Context/FirebaseContext'
+import '../../styles/Navbar.css'
+import FirebaseContext from '../../context/FirebaseContext'
 
 
 const Navbar = () => {

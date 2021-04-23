@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './ItemList.css'
+import '../../styles/ItemList.css'
 
 
 function Item(props) {

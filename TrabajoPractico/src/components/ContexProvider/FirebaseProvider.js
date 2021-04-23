@@ -1,9 +1,9 @@
 import firebase from "firebase/app";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { getFirestore } from "../../configs/firebase";
 import "firebase/firestore";
-import FirebaseContex from '../../Context/FirebaseContext'
-
+import FirebaseContex from '../../context/FirebaseContext'
+import { setItem } from '../../ListaItems'
 
 
 function FirebaseProvider(props) {
@@ -11,23 +11,54 @@ function FirebaseProvider(props) {
     const [lastId, setLastId] = useState();
 
 
-    const getAll= async()=> {
+    const getAll = async () => {
         const productos = await db.collection("productos").get();
-        const prod =[]
+        const prod = []
         productos.forEach((doc) => {
-            prod.push(doc.data())
+            prod.push(doc.data());
+            setItem(doc.data())
+
         });
-      return prod;
+        return prod;
     }
 
-     const getCategorias= async()=> {
+    const getCategorias = async () => {
         const productos = await db.collection("categorias").get();
-        const cat =[]
+        const cat = []
         productos.forEach((doc) => {
             cat.push(doc.id)
         });
-      return cat;
+        return cat;
     }
+
+    const getById = async (id) => {
+        const docRef = await db.collection("productos").doc(id);
+        const data= {
+            title: '',
+            category: '',
+            description: '',
+            img: '',
+            stock: 0,
+            price: 0,
+        }
+        console.log('la id es:',id)
+        docRef.get().then((doc) => {
+            if (doc.exists) {
+                console.log("Document data:", doc.data());
+                data.title= doc.data().title
+                data.category= doc.data().category
+                data.description= doc.data().description
+                data.img= doc.data().img
+                data.stock= doc.data().stock
+                data.price= doc.data().price
+            } else {
+                console.log("No such document!");
+            }
+        });
+        return(data)
+    }
+
+
 
     function createOrder(datos) {
         const productos = []
@@ -62,13 +93,13 @@ function FirebaseProvider(props) {
         })
     }
 
-    function viewOrder (id){
+    function viewOrder(id) {
         const productos = db
-      .collection("productos")
-      .doc(id); 
-      productos.get().then((res) => {
-        console.log(res.data());
-      });
+            .collection("productos")
+            .doc(id);
+        productos.get().then((res) => {
+            console.log(res.data());
+        });
     }
 
     const { children } = props;
@@ -78,8 +109,10 @@ function FirebaseProvider(props) {
             getAll: getAll,
             createOrder: createOrder,
             actualizarStock: actualizarStock,
-            viewOrder:viewOrder,
-            getCategorias:getCategorias,
+            viewOrder: viewOrder,
+            getCategorias: getCategorias,
+            getById: getById,
+
         }}>
             {children}
         </FirebaseContex.Provider>

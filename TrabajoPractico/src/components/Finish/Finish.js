@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import FirebaseContext from '../../Context/FirebaseContext'
+import FirebaseContext from '../../context/FirebaseContext'
 import { NavLink } from 'react-router-dom';
-import './Finish.css'
+import '../../styles/Finish.css'
 
 const Finish = (propr) => {
     const firebaseContext = useContext(FirebaseContext);

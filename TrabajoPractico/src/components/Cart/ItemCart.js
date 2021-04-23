@@ -1,6 +1,6 @@
 import React from 'react';
-import './ItemCart.css'
-import CartContext from '../../Context/CartContext'
+import '../../styles/ItemCart.css'
+import CartContext from '../../context/CartContext'
 import { useContext } from 'react';
 
 
@@ -9,7 +9,9 @@ function Item(props) {
     return (
         <div className="ItemCart">
             <ul className='ItemCartDetail' >
-                <li className="imagen">{props.item[0].img}</li>
+                <li className="imagen">
+                    <i class={props.item[0].img}></i>
+                </li>
                 <li className="titulo">{props.item[0].title} <br />
                     <p>{props.item[0].description}</p> </li>
                 <li className='cantidad' >Cantidad: <br />{props.item[1]}</li>
