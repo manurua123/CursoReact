@@ -19,7 +19,6 @@ const ItemsListContainer = (props) => {
 
     return (
         <div className='ItemsListContainer'>
-            {console.log('los productos son:',productos)}
             <ItemList items={(id ? (productos.filter(i=>i.category===id)) : productos)} />
         </div>
     )

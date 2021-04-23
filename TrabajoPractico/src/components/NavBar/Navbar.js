@@ -34,7 +34,7 @@ const Navbar = () => {
                 <li>
                     <DropdownButton id="dropdown-basic-button" title="Categorias">
                         {categorias.map((i)=>
-                             <Dropdown.Item><NavLink to={ `/category/${i}`}><p className='nav-links'>{i}</p></NavLink> </Dropdown.Item>
+                             <Dropdown.Item key=''><NavLink to={ `/category/${i}`}><p className='nav-links'>{i}</p></NavLink> </Dropdown.Item>
                         )}
                     </DropdownButton>
                 </li>

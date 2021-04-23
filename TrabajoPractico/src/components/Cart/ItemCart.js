@@ -10,7 +10,7 @@ function Item(props) {
         <div className="ItemCart">
             <ul className='ItemCartDetail' >
                 <li className="imagen">
-                    <i class={props.item[0].img}></i>
+                    <i className={props.item[0].img}></i>
                 </li>
                 <li className="titulo">{props.item[0].title} <br />
                     <p>{props.item[0].description}</p> </li>

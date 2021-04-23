@@ -12,9 +12,9 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
     <div className='contenido'>
       Unidades Disponibles: {stock} <br />
       <div className='box1'>
-        <button className="changeButton sub" disabled={(valor < 1) ? true : false} onClick={() => { setDatos((valor) => valor - 1) }}><i class="fas fa-minus"></i></button>
+        <button className="changeButton sub" disabled={(valor < 1) ? true : false} onClick={() => { setDatos((valor) => valor - 1) }}><i className="fas fa-minus"></i></button>
         {valor}
-        <button className="changeButton add" disabled={(valor >= stock) ? true : false} onClick={() => setDatos((valor) => valor + 1)}> <i class="fas fa-plus"></i> </button>
+        <button className="changeButton add" disabled={(valor >= stock) ? true : false} onClick={() => setDatos((valor) => valor + 1)}> <i className="fas fa-plus"></i> </button>
       </div>
       <div className='botones'>
         <button className={(valor > stock | valor < 1) ? 'noSendButton' : 'sendButton'} disabled={(valor > stock | valor < 1) ? true : false} onClick={

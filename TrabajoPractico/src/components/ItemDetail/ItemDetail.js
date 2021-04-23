@@ -8,7 +8,7 @@ const ItemDetail = (props) => {
   const NoHayCosas = () => {
     return (
       <div className='noCart'>
-        <i class="fas fa-ghost"></i>
+        <i className="fas fa-ghost"></i>
         <h3>ITEM NO ENCONTRADO</h3>
         <NavLink className='cartButton' to='/' >Ver Productos</NavLink>
       </div>
@@ -19,7 +19,7 @@ const ItemDetail = (props) => {
     <ul className="producto">
       <li className="titulo">{props.item.title}</li>
       <li className="imagen">
-        <i class={props.item.img}></i>
+        <i className={props.item.img}></i>
       </li>
       <li className='descripcion'>{props.item.description}</li>
       <li className="precio">Precio: ${props.item.price}</li>

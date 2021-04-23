@@ -8,7 +8,7 @@ const Finish = (propr) => {
  
     return (
         <div className='finish'>
-              <i class="fas fa-shipping-fast"></i>
+              <i className="fas fa-shipping-fast"></i>
                 <h3>Tu compra fue registrado con el numero:</h3>
                 <h4>{firebaseContext.lastId}</h4>
             <NavLink className='cartButton' to='/' >Volver a la tienda</NavLink>

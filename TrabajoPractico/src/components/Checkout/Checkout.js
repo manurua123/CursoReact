@@ -45,13 +45,13 @@ const Checkout = () => {
             </div>
             <form className='checkoutForm'>
                 <h3>Datos de Contacto</h3>
-                <label for="nombre">Nombre y apellido</label>
+                <label htmlFor="nombre">Nombre y apellido</label>
                 <input type="text" onChange={handleInputChange} name="nombre"></input>
-                <label for="nombre">Telefono</label>
+                <label htmlFor="nombre">Telefono</label>
                 <input type="number" onChange={handleInputChange} name="telefono"></input>
-                <label for="nombre">Email</label>
-                <input type="email" className onChange={handleInputChange} name="email"></input>
-                <label for="nombre">Repite el Email</label>
+                <label htmlFor="nombre">Email</label>
+                <input type="email"  onChange={handleInputChange} name="email"></input>
+                <label htmlFor="nombre">Repite el Email</label>
                 <input type="text" onChange={handleInputChange} name="email2"></input>
                 <h3>TOTAL $ {cartContext.PrecioTotal()}</h3>
                 <NavLink className={validado ? 'cartButton' : 'noButton'} to='/finish' onClick={() => active()} > Comprar </NavLink>

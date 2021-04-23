@@ -7,7 +7,7 @@ const ItemList = (props) => {
     <ul className='listaProductos'>
       {props.items.map((item,index) => (
         <Item key={index} item={item} />
-      ))} 
+      ))}
     </ul>
 
   )};

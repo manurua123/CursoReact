@@ -6,7 +6,7 @@ function CheckoutItem(props) {
 
         <ul className='ItemCartDetail' >
             <li className="imagen">
-                 <i class={props.item[0].img}></i>
+                 <i className={props.item[0].img}></i>
                 </li>
             <li className="titulo">{props.item[0].title} </li>
             <li className='cantidad' >Cantidad: <br />{props.item[1]}</li>

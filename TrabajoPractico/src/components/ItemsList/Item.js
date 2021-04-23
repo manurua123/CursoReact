@@ -10,7 +10,7 @@ function Item(props) {
             <Link className="LinkProducto" to={`/item/${props.item.title}`} >
                 
                 <li className="imagen">
-                 <i class={props.item.img}></i>
+                 <i className={props.item.img}></i>
                 </li>
                 <li className="titulo "> {props.item.title}</li>
             </Link>

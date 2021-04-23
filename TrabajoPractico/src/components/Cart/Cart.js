@@ -26,7 +26,7 @@ const Cart = () => {
     const NoHayCosas=() =>{
         return (
             <div className='noCart'>
-                <i class="fas fa-shopping-basket"></i>
+                <i className="fas fa-shopping-basket"></i>
                 <h3>Tu carrito esta vacio</h3>
                 <NavLink className='cartButton' to='/' >Ver Productos</NavLink>
             </div>
