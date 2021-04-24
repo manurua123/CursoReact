@@ -87,7 +87,7 @@ localhost:3000
 - [Bootstrap ](https://getbootstrap.com/)
 - [Firebase ](https://firebase.google.com/)
 ---
-### Gracias 🎁
+## Gracias 🎁
 
 - [Harol Thomas Cesar Reyes](https://github.com/HaroldReyes/ )- Profesor
 - Marcos Vidal - Tutor
