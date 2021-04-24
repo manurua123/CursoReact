@@ -8,7 +8,6 @@ function Item(props) {
     return (
         <div className="ContenedoLink">
             <Link className="LinkProducto" to={`/item/${props.item.title}`} >
-                
                 <li className="imagen">
                  <i className={props.item.img}></i>
                 </li>

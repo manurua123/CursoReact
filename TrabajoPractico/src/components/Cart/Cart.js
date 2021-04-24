@@ -10,20 +10,23 @@ const Cart = () => {
     const HayCosas = () => {
         return (
             <div className='Cart'>
+                <div className='tituloCarrito'>
+                <h3>  Carrito  </h3>
+                </div>
                 <div className='CartItemList'>
                     {context.cart.map((item, index) => (
                         <ItemCart key={index} item={item} />
                     ))}
                 </div>
                 <ul className='botonesCarrito'>
-                    <li><button className=' limpiarCarro' onClick={() => context.clear()}> Eliminar todo</button> </li>
+                    <li><button className='limpiarCarro' onClick={() => context.clear()}>Eliminar todo</button> </li>
                     <li><h3 className='montoTotal'> Monto total   $ {context.PrecioTotal()} </h3></li>
                     <li><><NavLink className='cartButton terminarCompra' to='/checkout' >Terminar Compra</NavLink></></li>
                 </ul>
             </div>)
     }
 
-    const NoHayCosas=() =>{
+    const NoHayCosas = () => {
         return (
             <div className='noCart'>
                 <i className="fas fa-shopping-basket"></i>

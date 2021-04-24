@@ -38,6 +38,7 @@ const Checkout = () => {
     }
     return (
         <div className='checkoutContainer'>
+            <div className='CheckoutTitulo'><h3>Checkout</h3></div>
             <div className='checkoutItemList'>
                 {cartContext.cart.map((item, index) => (
                     <CheckoutItem key={index} item={item} />

@@ -19,6 +19,7 @@ const ItemsListContainer = (props) => {
 
     return (
         <div className='ItemsListContainer'>
+            {id? <h3>{id}</h3> : <h3>Items</h3>}
             <ItemList items={(id ? (productos.filter(i=>i.category===id)) : productos)} />
         </div>
     )

@@ -1,11 +1,22 @@
 .Cart {
   padding-top: 6em;
-  width: 90%;
-  margin: 0px 5%;
+  width: 95%;
+  margin: 0px 2.5%;
 }
 .Cart h3 {
-  margin: 1em 0px;
-  color:#dddddd;
+  color: #dddddd;
+}
+.montoTotal{
+  margin-bottom: 1em;
+}
+.tituloCarrito {
+  margin: 0.5em 40% 2.5% 0%;
+  color: #dddddd;
+  font-size: 2em;
+  width: 30%;
+  font-weight: bold;
+  border-bottom: 2px solid #ffc93c;
+ 
 }
 .botonesCarrito {
   list-style: none;
@@ -26,7 +37,7 @@
   text-align: center;
 }
 .ItemCart {
-  background: #f8f5f1;
+  background: #dddddd;
   width: 100%;
   margin-top: 0.2em;
   list-style: none;
@@ -57,7 +68,7 @@
 }
 .noCart h3 {
   padding: 30px 0px;
-  color:#dddddd;
+  color: #dddddd;
 }
 
 
