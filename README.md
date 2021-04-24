@@ -49,7 +49,7 @@ sudo apt-get install nodejs
 ingresa al sitio oficial de [node.js](https://nodejs.org/en/)  descarga el instalador.
 
 
-_Debería poder ejecutar el siguiente comando después del procedimiento de instalación a continuación. _
+_Debería poder ejecutar el siguiente comando después del procedimiento de instalación a continuación._
 
 ```
 $ node --version
@@ -64,8 +64,8 @@ $ npm --version
 ### Installation and Setup Instructions 🔧
 
 ```
-$ git clone https://github.com/ORG/PROJECT.git
-$ cd PROJECT
+$ git clone https://github.com/manurua123/CursoReact/
+$ cd TrabajoPractico
 $ npm install
 ```
 
