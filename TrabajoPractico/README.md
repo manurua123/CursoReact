@@ -81,7 +81,7 @@ _ingresar a la app:_
 localhost:3000
 ```
 
-### Languages & tools
+## Languages & tools
 
 - [React](https://reactjs.org/)
 - [Bootstrap ](https://getbootstrap.com/)
