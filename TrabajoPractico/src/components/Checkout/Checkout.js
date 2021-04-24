@@ -24,11 +24,11 @@ const Checkout = () => {
         validarDatos(event.target)
     }
     function validarDatos(e) {
-        if(e.value !=='')
-            if(e.name === 'email2' && e.value === datos.email){
-            setValidado(true)
-            return(true)
-        }
+        if (e.value !== '')
+            if (e.name === 'email2' && e.value === datos.email) {
+                setValidado(true)
+                return (true)
+            }
         setValidado(false)
     }
     const active = () => {
@@ -51,7 +51,7 @@ const Checkout = () => {
                 <label htmlFor="nombre">Telefono</label>
                 <input type="number" onChange={handleInputChange} name="telefono"></input>
                 <label htmlFor="nombre">Email</label>
-                <input type="email"  onChange={handleInputChange} name="email"></input>
+                <input type="email" onChange={handleInputChange} name="email"></input>
                 <label htmlFor="nombre">Repite el Email</label>
                 <input type="text" onChange={handleInputChange} name="email2"></input>
                 <h3>TOTAL $ {cartContext.PrecioTotal()}</h3>

@@ -33,8 +33,8 @@ const Navbar = () => {
             <ul className={state ? 'nav-menu active' : 'nav-menu'}>
                 <li>
                     <DropdownButton id="dropdown-basic-button" title="Categorias">
-                        {categorias.map((i)=>
-                             <Dropdown.Item key='key'><NavLink to={ `/category/${i}`}><p className='nav-links'>{i}</p></NavLink> </Dropdown.Item>
+                        {categorias.map((i,index)=>
+                             <Dropdown.Item key={index}><NavLink to={ `/category/${i}`}><p className='nav-links'>{i}</p></NavLink> </Dropdown.Item>
                         )}
                     </DropdownButton>
                 </li>

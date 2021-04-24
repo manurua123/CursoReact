@@ -85,7 +85,6 @@ function FirebaseProvider(props) {
             producto.get().then((i) => {
                 if (i.exists) {
                     stockAct = { stock: (i.data().stock - c[1]) }
-                    console.log('item:', c[0].title, 'Stock old:', i.data().stock, ' cantidad carriro', c[1], 'stock final', stockAct.stock)
                     producto.update(stockAct)
                 }
             });
