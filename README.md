@@ -49,7 +49,7 @@ sudo apt-get install nodejs
 ingresa al sitio oficial de [node.js](https://nodejs.org/en/)  descarga el instalador.
 
 
-_Debería poder ejecutar el siguiente comando después del procedimiento de instalación a continuación._
+_Debería poder ejecutar el siguiente comando después del procedimiento de instalación_
 
 ```
 $ node --version
@@ -89,5 +89,5 @@ localhost:3000
 ---
 ### Gracias 🎁
 
-- Harol Thomas Cesar Reyes - Profesor
+- [Harol Thomas Cesar Reyes](https://github.com/HaroldReyes/ )- Profesor
 - Marcos Vidal - Tutor
