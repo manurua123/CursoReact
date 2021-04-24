@@ -16,37 +16,26 @@ Desarrollarás una app de un e-commerce para poder vender productos de un rubro 
 
 <img src="./TrabajoPractico/animation.gif" width="100%" height=auto/>
 
+---
 ## Pre-Requisitos 📋
 
-Node is really easy to install & now include NPM. You should be able to run the following command after the installation procedure below.
+##### Node instalación enOS X
 
-```
-$ node --version
-v0.10.24
-```
+Necesitarás usar una Terminal. En OS X, puede encontrar el terminal predeterminado en ` /Applications/Utilities/Terminal.app.`
 
-```
-$ npm --version
-1.3.21
-```
-
-##### Node installation on OS X
-
-You will need to use a Terminal. On OS X, you can find the default terminal in ` /Applications/Utilities/Terminal.app.`
-
-Please install Homebrew if it's not already done with the following command.
+Instale Homebrew si aún no lo ha hecho con el siguiente comando. 
 
 ```
 $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
-If everything when fine, you should run
+luego deberias poder ejecutar
 
 ```
 brew install node
 ```
 
-##### Node installation on Linux
+##### Node instalación en Linux
 
 ```
 sudo apt-get install python-software-properties
@@ -55,15 +44,28 @@ sudo apt-get update
 sudo apt-get install nodejs
 ```
 
-##### Node installation on Windows
+##### Node instalación en Windows
 
-Just go on [officia node.js](https://nodejs.org/en/) website & grab the installer. Also, be sure to have `git` available in your PATH, `npm` might need it.
+ingresa al sitio oficial de [node.js](https://nodejs.org/en/)  descarga el instalador.
+
+
+_Debería poder ejecutar el siguiente comando después del procedimiento de instalación_
+
+```
+$ node --version
+v14.15.4
+```
+
+```
+$ npm --version
+6.14.10
+```
 
 ### Installation and Setup Instructions 🔧
 
 ```
-$ git clone https://github.com/ORG/PROJECT.git
-$ cd PROJECT
+$ git clone https://github.com/manurua123/CursoReact/
+$ cd TrabajoPractico
 $ npm install
 ```
 
@@ -81,11 +83,11 @@ localhost:3000
 
 ### Languages & tools
 
-- React is used for UI.
-- Bootstrap
-- firebase: que es el firebase
-
+- [React](https://reactjs.org/)
+- [Bootstrap ](https://getbootstrap.com/)
+- [Firebase ](https://firebase.google.com/)
+---
 ### Gracias 🎁
 
-- Harol Thomas Cesar Reyes - Profesor
+- [Harol Thomas Cesar Reyes](https://github.com/HaroldReyes/ )- Profesor
 - Marcos Vidal - Tutor

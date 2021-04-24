@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Trabajo Practico React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Trabajo final del curso de React de CodeHouse 2021. La consigna era crear un e-commerce utilizando React y una base de datos Firebase_
 
-## Available Scripts
+## Consinga
 
-In the project directory, you can run:
+Desarrollarás una app de un e-commerce para poder vender productos de un rubro a elección.
 
-### `npm start`
+### User story:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Un usuario debe poder ingresar, navegar por los productos e ir a sus detalles.
+- Desde el detalle se debe poder ver la descripción, foto y precio e ingresarlo al carrito.
+- Una vez que el carrito tenga al menos un producto, se deberá visualizar un listado compacto de la orden con el precio total.
+- Al ingresar su nombre, apellido, teléfono e e-mail (ingresándolo dos veces para corroborar que sea correcto), debe activarse el botón de ‘realizar compra’.
+- Al clickear ‘realizar compra’ debe guardarse en la base de datos una orden que tenga todos los productos, la fecha y dar feedback del número de orden.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src="./animation.gif" width="100%" height=auto/>
 
-### `npm test`
+---
+## Pre-Requisitos 📋
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Node instalación enOS X
 
-### `npm run build`
+Necesitarás usar una Terminal. En OS X, puede encontrar el terminal predeterminado en ` /Applications/Utilities/Terminal.app.`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instale Homebrew si aún no lo ha hecho con el siguiente comando. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+luego deberias poder ejecutar
 
-### `npm run eject`
+```
+brew install node
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##### Node instalación en Linux
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+##### Node instalación en Windows
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ingresa al sitio oficial de [node.js](https://nodejs.org/en/)  descarga el instalador.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_Debería poder ejecutar el siguiente comando después del procedimiento de instalación_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+$ node --version
+v14.15.4
+```
 
-### Code Splitting
+```
+$ npm --version
+6.14.10
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation and Setup Instructions 🔧
 
-### Analyzing the Bundle Size
+```
+$ git clone https://github.com/manurua123/CursoReact/
+$ cd TrabajoPractico
+$ npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_iniciar el servidor:_
 
-### Making a Progressive Web App
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+_ingresar a la app:_
 
-### Advanced Configuration
+```
+localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Languages & tools
 
-### Deployment
+- [React](https://reactjs.org/)
+- [Bootstrap ](https://getbootstrap.com/)
+- [Firebase ](https://firebase.google.com/)
+---
+## Gracias 🎁
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Harol Thomas Cesar Reyes](https://github.com/HaroldReyes/ )- Profesor
+- Marcos Vidal - Tutor
