@@ -30,27 +30,20 @@ function FirebaseProvider(props) {
         });
         return cat;
     }
-
+    const [data,setData]= useState({
+        title: '',
+        category: '',
+        description: '',
+        img: '',
+        stock: 0,
+        price: 0,
+    })
     const getById = async (id) => {
         const docRef = await db.collection("productos").doc(id);
-        const data= {
-            title: '',
-            category: '',
-            description: '',
-            img: '',
-            stock: 0,
-            price: 0,
-        }
-        console.log('la id es:',id)
         docRef.get().then((doc) => {
             if (doc.exists) {
                 console.log("Document data:", doc.data());
-                data.title= doc.data().title
-                data.category= doc.data().category
-                data.description= doc.data().description
-                data.img= doc.data().img
-                data.stock= doc.data().stock
-                data.price= doc.data().price
+                setData( doc.data())
             } else {
                 console.log("No such document!");
             }

@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams, } from "react-router-dom";
-import ListaItems from "../../ListaItems"
+import FirebaseContext from '../../context/FirebaseContext'
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const [detail] = (ListaItems.filter(i => i.title === id));
+  const context = useContext(FirebaseContext);
+  
+  const [producto, setProducto] = useState()
+
+  const prod = async () => {
+    const resp = await context.getById(id)
+    setProducto(resp)
+  }
+  useEffect(() => {
+    prod();
+  }, [])
+
   return (
     <div >
-      <ItemDetail item={detail} />
+      <ItemDetail item={producto} />
     </div>
   )
 }
