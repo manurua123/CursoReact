@@ -6,7 +6,6 @@ import FirebaseContext from '../../context/FirebaseContext'
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const context = useContext(FirebaseContext);
-  
   const [producto, setProducto] = useState()
 
   const prod = async () => {
