@@ -46,6 +46,7 @@ function FirebaseProvider(props) {
                 setData( doc.data())
             } else {
                 console.log("No such document!");
+                setData( undefined);
             }
         });
         return(data)
