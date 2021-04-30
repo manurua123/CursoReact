@@ -32,7 +32,7 @@ function FirebaseProvider(props) {
     const getById = async (id) => {
         const docRef = await db.collection("productos").doc(id).get().then((doc) => {
             if (doc.exists) {
-                console.log("Document data:", doc.data());
+               
                 return( doc.data())
             } else {
                 console.log("No such document!");

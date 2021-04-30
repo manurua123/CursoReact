@@ -3,7 +3,7 @@ import CartContext from '../../context/CartContext'
 import ItemCart from './ItemCart'
 import { NavLink } from 'react-router-dom';
 import '../../styles/ItemCart.css'
-//test git
+
 const Cart = () => {
     const context = useContext(CartContext);
 

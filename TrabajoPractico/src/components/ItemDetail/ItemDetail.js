@@ -30,7 +30,7 @@ const ItemDetail = (props) => {
 
   return (
     <>
-      { (props.item ===  undefined ? <NoHayCosas /> : <HayCosas />)}
+      { (props.item ===  null ? <NoHayCosas /> : <HayCosas />)}
     </>
   )
 }
