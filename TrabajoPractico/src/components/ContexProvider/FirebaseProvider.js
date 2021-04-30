@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { getFirestore } from "../../configs/firebase";
 import "firebase/firestore";
 import FirebaseContex from '../../context/FirebaseContext'
-import { setItem } from '../../ListaItems'
 
 
 function FirebaseProvider(props) {
@@ -16,7 +15,6 @@ function FirebaseProvider(props) {
         const prod = []
         productos.forEach((doc) => {
             prod.push(doc.data());
-            setItem(doc.data())
 
         });
         return prod;
@@ -30,26 +28,18 @@ function FirebaseProvider(props) {
         });
         return cat;
     }
-    const [data,setData]= useState({
-        title: '',
-        category: '',
-        description: '',
-        img: '',
-        stock: 0,
-        price: 0,
-    })
+  
     const getById = async (id) => {
-        const docRef = await db.collection("productos").doc(id);
-        docRef.get().then((doc) => {
+        const docRef = await db.collection("productos").doc(id).get().then((doc) => {
             if (doc.exists) {
                 console.log("Document data:", doc.data());
-                setData( doc.data())
+                return( doc.data())
             } else {
                 console.log("No such document!");
-                setData( undefined);
+                return(false)
             }
         });
-        return(data)
+        return(docRef)
     }
 
 
